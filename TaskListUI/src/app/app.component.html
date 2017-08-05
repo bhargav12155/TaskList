@@ -1,0 +1,28 @@
+<div class="panel panel-default">
+
+	<div class="taskList padding_left_5  panel-body" style="max-width:auto;">
+
+		<h2>Please enter task and click on "Add Task" or press enter</h2>
+		<div class="input-group sameline">
+			<form (submit)="addTask($event)">
+				<input [(ngModel)]="newTask" (keyup.enter)="newTask=''" class="form-control textfield " name="newTask" placeholder="Type a new task.."
+				/>
+				<button class=" btn btn-primary" type="submit" [disabled]="newTask===''">Add Task</button>
+			</form>
+		</div>
+	</div>
+</div>
+<br>
+<div class="container" *ngIf="displayLists">
+	<h2 class="underline">Added Tasks</h2>
+	<ul class="list-group">
+		<li class="list-group-item" *ngFor="let task of taskList; let i=index">
+			<input type="checkbox" (change)=updateTask(task) class="checkbox" [(ngModel)]="task.completed" />
+			<span [ngClass]="{'checked': task.completed}">{{ task.name }}</span>
+			<span (click)="deleteTask(i)" class="glyphicon glyphicon-remove text-red" aria-hidden="true"></span>
+		</li>
+	</ul>
+	<!--div class="mtop20">
+		<button (click)="deleteSelectedTasks()" [disabled]="taskList.length == 0" >Delete Selected</button>
+	</div-->
+</div>

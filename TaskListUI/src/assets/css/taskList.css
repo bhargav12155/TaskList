@@ -1,0 +1,58 @@
+
+	body {
+		margin: 20px;
+		font-family: verdana;
+	}
+  .box1 {
+    border: solid 1px #006699;
+    padding: 20px;
+    background: #f3f3f3;
+    border-radius: 5px;
+  }
+.sameline{
+	   display:inline;
+float: left;
+}
+  .task_container input.textfield {
+    width: 480px;
+    height: 36px;
+    margin-right: 20px;
+    font-size: 1.4em;
+    vertical-align: top;
+  }
+
+  .task_container input.checkbox {
+    width: 20px;
+    height: 20px;
+  }
+
+  .task_container .checked {
+    text-decoration: line-through;
+  }
+
+  .task_container button {
+    height: 36px;
+    font-size: 1.1em;
+    vertical-align: top;
+    border: solid 1px #999;
+    border-radius: 2px;
+  }
+
+  .task_container .delete-icon {
+    diplay: inline-block;
+    cursor: pointer;
+  }
+  .task_container ul {
+   font-size: 1.2em;
+    list-style-type: none;
+  }
+.padding_left_5{
+  padding-left:5%; 
+}
+
+.text_red{
+  color:#f44336!important
+}
+.underline{
+  	text-decoration: underline;
+}
